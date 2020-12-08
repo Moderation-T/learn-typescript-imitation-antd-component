@@ -8,3 +8,5 @@ interface Person {
 }
 
 let me: Person = { id: 1, name: 'tang', age: 12 }
+
+// 对类进行定义和抽象
