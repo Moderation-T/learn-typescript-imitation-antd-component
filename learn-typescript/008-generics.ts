@@ -42,3 +42,53 @@ function echoWithLength<T extends HasLength>(arg: T): T {
 const r1 = echoWithLength({ length: 1 })
 const r2 = echoWithLength([1, 2, 3])
 const r3 = echoWithLength('string')
+
+/************* 泛型类和接口的灵活用法 ******************/
+
+class Queue<T>{
+  private data = [];
+  push(item: T) {
+    this.data.push(item)
+  }
+  pop(item: T) {
+    this.data.shift();
+  }
+}
+
+const q1 = new Queue<number>();
+q1.push(123)
+q1.pop(123)
+
+const q2 = new Queue<string>()
+q2.push('123')
+q2.pop('123')
+
+
+interface KeyValue<K, V> {
+  key: K
+  value: V
+}
+
+const kv1: KeyValue<string, number> = { key: "111", value: 111 }
+const kv2: KeyValue<number, string> = { key: 111, value: "222" }
+
+const arr1: number[] = [1, 2, 3]
+const arr2: Array<number> = [1, 2, 3]
+
+function plus(a: number, b: number): number {
+  return a + b;
+}
+
+const plusRes = plus(1, 2);
+
+interface IPlus<T> {
+  (a: T, b: T): T
+}
+
+function connect(a: string, b: string): string {
+  return a + b;
+}
+
+const connectRest = connect('str', 'ing')
+const p: IPlus<number> = plus
+const c: IPlus<string> = connect
