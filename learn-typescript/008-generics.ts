@@ -5,6 +5,8 @@
 
 import { tuple } from "antd/lib/_util/type";
 
+/************* 简单实用 ******************/
+
 function echo<T>(arg: T): T {
   return arg;
 }
@@ -18,3 +20,25 @@ function swap<T, U>(tuple: [T, U]) {
 
 const swapRes = swap(['string', 666]);
 
+/************* 泛型约束 ******************/
+
+function echoWithArr<T>(arg: T[]): T[] {
+  console.log(arg.length);
+  return arg;
+
+}
+
+const echoWithArrRes = echoWithArr([1, '2', 3])
+
+interface HasLength {
+  length: number
+}
+
+function echoWithLength<T extends HasLength>(arg: T): T {
+  console.log(arg.length);
+  return arg
+}
+
+const r1 = echoWithLength({ length: 1 })
+const r2 = echoWithLength([1, 2, 3])
+const r3 = echoWithLength('string')
