@@ -92,3 +92,5 @@ function connect(a: string, b: string): string {
 const connectRest = connect('str', 'ing')
 const p: IPlus<number> = plus
 const c: IPlus<string> = connect
+
+/************* 泛型约束 ******************/
