@@ -86,3 +86,12 @@ const theme = useContext(ThemeContext)
 
 console.log(theme); // {background:#fff}
 ```
+
+- hook 规则
+
+只在最顶层使用 hook 
+
+只在 React 函数中调用 hook
+
+
+
