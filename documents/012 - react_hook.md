@@ -31,7 +31,58 @@ useEffect(() => {
 ```
 
 - 自定义 hook
-将组件逻辑提取到可重用的函数中
+  将组件逻辑提取到可重用的函数中
 
 - HOC
-高级组件就是一个函数，接受一个组件作为参数，返回一个新的组件
+  高级组件就是一个函数，接受一个组件作为参数，返回一个新的组件
+
+- ref hook
+
+```js
+// 保存状态 不同的渲染中保存值
+const numRef = useRef(0);
+```
+
+```js
+// componentDidUpdate
+const didMountRef = useRef(false);
+useEffect(() => {
+  if (didMountRef.current) {
+    console.log('this is update');
+  } else {
+    didMountRef.current = true;
+  }
+});
+```
+
+```js
+const domRef = useState<HTMLInputElement>(null)
+<input ref={domRef}>
+```
+
+- useContext
+
+```js
+// father 组件
+const themes = {
+  light: {
+    background: '#fff',
+  },
+  dark: {
+    background: '#000',
+  },
+};
+
+export const ThemeContext = React.createContext(themes.light);
+
+<ThemeContext.Provider value={themes.light}>
+  <Son />
+</ThemeContext.Provider>;
+
+
+// son
+import {ThemeContext} from 'father'
+const theme = useContext(ThemeContext)
+
+console.log(theme); // {background:#fff}
+```
