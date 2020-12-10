@@ -1718,7 +1718,7 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@*":
+"@types/jest@*", "@types/jest@^26.0.15":
   version "26.0.18"
   resolved "https://registry.npm.taobao.org/@types/jest/download/@types/jest-26.0.18.tgz?cache=0&sync_timestamp=1607458756521&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fjest%2Fdownload%2F%40types%2Fjest-26.0.18.tgz#3c5f9228e9ac15bd42f903f1acf2ad6ea5ed73d9"
   integrity sha1-PF+SKOmsFb1C+QPxrPKtbqXtc9k=
@@ -1746,6 +1746,11 @@
   resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-14.14.11.tgz?cache=0&sync_timestamp=1607444905415&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-14.14.11.tgz#fc25a4248a5e8d0837019b1d170146d07334abe0"
   integrity sha1-/CWkJIpejQg3AZsdFwFG0HM0q+A=
 
+"@types/node@^12.0.0":
+  version "12.19.8"
+  resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-12.19.8.tgz?cache=0&sync_timestamp=1607444905415&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-12.19.8.tgz#efd6d1a90525519fc608c9db16c8a78f7693a978"
+  integrity sha1-79bRqQUlUZ/GCMnbFsinj3aTqXg=
+
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
   resolved "https://registry.npm.taobao.org/@types/normalize-package-data/download/@types/normalize-package-data-2.4.0.tgz?cache=0&sync_timestamp=1605054731394&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnormalize-package-data%2Fdownload%2F%40types%2Fnormalize-package-data-2.4.0.tgz#e486d0d97396d79beedd0a6e33f4534ff6b4973e"
@@ -1761,10 +1766,30 @@
   resolved "https://registry.npm.taobao.org/@types/prettier/download/@types/prettier-2.1.5.tgz?cache=0&sync_timestamp=1605055213470&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fprettier%2Fdownload%2F%40types%2Fprettier-2.1.5.tgz#b6ab3bba29e16b821d84e09ecfaded462b816b00"
   integrity sha1-tqs7uinha4IdhOCez63tRiuBawA=
 
+"@types/prop-types@*":
+  version "15.7.3"
+  resolved "https://registry.npm.taobao.org/@types/prop-types/download/@types/prop-types-15.7.3.tgz?cache=0&sync_timestamp=1605055564732&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fprop-types%2Fdownload%2F%40types%2Fprop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
+  integrity sha1-KrDV2i5YFflLC51LldHl8kOrLKc=
+
 "@types/q@^1.5.1":
   version "1.5.4"
   resolved "https://registry.npm.taobao.org/@types/q/download/@types/q-1.5.4.tgz?cache=0&sync_timestamp=1605055213197&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fq%2Fdownload%2F%40types%2Fq-1.5.4.tgz#15925414e0ad2cd765bfef58842f7e26a7accb24"
   integrity sha1-FZJUFOCtLNdlv+9YhC9+JqesyyQ=
+
+"@types/react-dom@^16.9.8":
+  version "16.9.10"
+  resolved "https://registry.npm.taobao.org/@types/react-dom/download/@types/react-dom-16.9.10.tgz#4485b0bec3d41f856181b717f45fd7831101156f"
+  integrity sha1-RIWwvsPUH4VhgbcX9F/XgxEBFW8=
+  dependencies:
+    "@types/react" "^16"
+
+"@types/react@^16", "@types/react@^16.9.53":
+  version "16.14.2"
+  resolved "https://registry.npm.taobao.org/@types/react/download/@types/react-16.14.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Freact%2Fdownload%2F%40types%2Freact-16.14.2.tgz#85dcc0947d0645349923c04ccef6018a1ab7538c"
+  integrity sha1-hdzAlH0GRTSZI8BMzvYBihq3U4w=
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^3.0.2"
 
 "@types/resolve@0.0.8":
   version "0.0.8"
@@ -3809,6 +3834,11 @@ cssstyle@^2.2.0:
   integrity sha1-/2ZaDdvcMYZLCWR/NBY0Q9kLCFI=
   dependencies:
     cssom "~0.3.6"
+
+csstype@^3.0.2:
+  version "3.0.5"
+  resolved "https://registry.npm.taobao.org/csstype/download/csstype-3.0.5.tgz?cache=0&sync_timestamp=1605258454930&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcsstype%2Fdownload%2Fcsstype-3.0.5.tgz#7fdec6a28a67ae18647c51668a9ff95bb2fa7bb8"
+  integrity sha1-f97GoopnrhhkfFFmip/5W7L6e7g=
 
 cyclist@^1.0.1:
   version "1.0.1"
@@ -10611,6 +10641,11 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.npm.taobao.org/typedarray/download/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+
+typescript@^4.0.3:
+  version "4.1.2"
+  resolved "https://registry.npm.taobao.org/typescript/download/typescript-4.1.2.tgz#6369ef22516fe5e10304aae5a5c4862db55380e9"
+  integrity sha1-Y2nvIlFv5eEDBKrlpcSGLbVTgOk=
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
