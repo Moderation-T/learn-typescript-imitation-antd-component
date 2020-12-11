@@ -1,0 +1,86 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  // 盒模型
+  border: $btn-border-width;
+  box-shadow: $btn-box-shadow;
+  // 字体
+  font-weight: $btn-font-weight;
+  font-family: $btn-font-family;
+  // 颜色
+  color: $body-color;
+  background-image: none;
+  // 布局
+  line-height: $btn-line-height;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  // 鼠标
+  cursor: pointer;
+  // 动画
+  transition: $btn-transition;
+
+  // 联合属性 padding font-size border-radius -> 决定按钮的大小
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $border-radius);
+
+  // disable 设置
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: $btn-disabled-opacity;
+    box-shadow: none;
+
+    // 所有子集
+    >* {
+      // 禁用鼠标事件
+      pointer-events: none;
+    }
+  }
+}
+
+// 按钮大小
+.btn-lg {
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $border-radius-lg);
+}
+
+.btn-sm {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $border-radius-sm);
+}
+
+// 按钮类型
+.btn-default {
+  // 联合属性 background,border,color,hover-background: lighten($background, 7.5%),hover-border: lighten($border, 10%),hover-color: $color, -> 决定按钮的样式
+  @include button-style($btn-background, $gray-500, $body-color, $white, $primary, $primary)
+}
+
+.btn-primary {
+  @include button-style($primary, $primary, $white)
+}
+
+.btn-danger {
+  @include button-style($danger, $danger, $white)
+}
+
+.btn-link {
+  font-weight: $font-weight-normal;
+  color: $btn-link-color;
+  text-decoration: $link-decoration;
+  box-shadow: none;
+
+  &:hover {
+    color: $btn-link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:focus,
+  &.focus {
+    text-decoration: $link-hover-decoration;
+    box-shadow: none;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+    pointer-events: none;
+  }
+}
